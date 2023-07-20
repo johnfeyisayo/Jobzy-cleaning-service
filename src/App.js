@@ -20,7 +20,6 @@ function App() {
       <Route path='contact' element={<Contact />}></Route>
       <Route path='services' element={<Services />}></Route>
     </Routes>
-    <p className="h-10 w-10 rounded-full">Hello John</p>
     </div>
   );
 }
