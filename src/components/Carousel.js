@@ -29,15 +29,16 @@ export default function CarouselComponent() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper bg-black"
         style={{
           '--swiper-pagination-color': '#fff',
           '--swiper-navigation-color': '#fff',
           '--swiper-navigation-size': '25px'
+          
         }}>
         <SwiperSlide>
           <div className="relative">
-            <img src={img1} className="md:h-[750px] md:w-[100%] h-[500px] "></img>
+            <img src={img1} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
               <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
@@ -59,7 +60,7 @@ export default function CarouselComponent() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img2} className="md:h-[750px] md:w-[100%] h-[500px] "></img>
+            <img src={img2} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
               <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
@@ -82,7 +83,7 @@ export default function CarouselComponent() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img3} className="md:h-[750px] md:w-[100%] h-[500px] "></img>
+            <img src={img3} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
               <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
