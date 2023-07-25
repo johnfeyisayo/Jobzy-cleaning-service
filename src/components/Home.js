@@ -15,6 +15,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+
 const Home = () => {
   return (
     <div>
@@ -52,7 +53,7 @@ const Home = () => {
       </div>
       <section className="h-auto opacity-100 ">
         <div className="relative w-[100%] ">
-          <img src={gloves} className="overflow-hidden h-[300px] w-[100%]" />
+          <img src={gloves} className="overflow-hidden h-[300px] w-[100%] brightness-75 "  />
           <div className="flex flex-col gap-2 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
             <h2 className=" font-inter text-[25px] md:text-[40px] mx-auto   px-3">Who We Are</h2>
             <h3 className=" font-inter text-[18px] md:text-[25px] mx-auto  md:my-[0px] p-3">
@@ -88,7 +89,7 @@ const Home = () => {
 
       <section className="h-auto ">
         <div className="relative w-[100%] gap-5 ">
-          <img src={cleaningItems} className="overflow-hidden h-[600px] w-[100%]" />
+          <img src={cleaningItems} className="overflow-hidden h-[600px] w-[100%] brightness-75" />
           <div className="flex  flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
             <h2 className=" font-inter text-[22px] md:text-[40px] mx-auto  px-3 ">
               Why Choose Jobzy Services Solution?
@@ -137,7 +138,7 @@ const Home = () => {
       </section>
       <section className="h-auto ">
         <div className="relative w-[100%] gap-5 ">
-          <img src={cleaningitem} className="overflow-hidden h-[400px] w-[100%]" />
+          <img src={cleaningitem} className="overflow-hidden h-[400px] w-[100%] brightness-75" />
           <div className="flex  flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
             <h2 className=" font-inter text-[22px] md:text-[40px] mx-auto  px-3 ">
               We clean so you don’t have to.
