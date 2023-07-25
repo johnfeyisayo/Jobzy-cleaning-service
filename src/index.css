@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Services */
 #services-bg {
     background: url(./assets//kelly-sikkema-xp-ND7NjWaA-unsplash\ \(1\).png);
     background-size: contain;
@@ -11,7 +11,6 @@
     background-color: rgb(172, 168, 168);
     background-blend-mode: multiply;
     height: 110px;
-
 }
 
 @media (min-width: 375px) { 

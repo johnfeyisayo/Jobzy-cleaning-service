@@ -19,7 +19,7 @@ function Services() {
             <div
               key={card.id}
               className="cursor-pointer hover:scale-110 duration-500  bg-white rounded-md shadow-lg mb-10 sm:w-72 lg:w-96 mx-8 ">
-              <img src={card.img} alt={card.title} className="rounded-t-md w-full font-bold" />
+              <img src={card.img} alt={card.title} className="rounded-t-md w-full font-bold"  id='card-image'/>
               <div className="flex flex-col gap-3 p-5">
                 <h3 className="uppercase text-lg ">{card.title}</h3>
                 <p className="text-xs text-[#828181]">{card.description}</p>
