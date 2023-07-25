@@ -2,3 +2,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#services-bg {
+    background: url(./assets//kelly-sikkema-xp-ND7NjWaA-unsplash\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(172, 168, 168);
+    background-blend-mode: multiply;
+    height: 110px;
+
+}
+
+@media (min-width: 375px) { 
+    #services-bg {
+        background-size: cover;
+        /* height: 200px; */
+    }
+}
+
+@media (min-width: 640px) { 
+    #services-bg {
+        background-size: cover;
+        height: 210px;
+    }
+
+}
+
+@media (min-width: 768px) { 
+    #services-bg {
+        background-size: cover;
+        height: 260px;
+    }
+}
+
+@media (min-width: 1024px) { 
+    #services-bg {
+        background-size: cover;
+        height: 400px;
+    }
+}
