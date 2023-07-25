@@ -8,9 +8,10 @@ export default function Navbar() {
 
   return (
  //fixed top-0 left-0 right-0 p-3 for fixed positioning
-    <div className=" flex   bg-black ">
+    <div className=" flex  bg-black ">
    
-      <img src={logo} className=""></img>
+      <img src={logo} className=" h-[60px] my-4"></img>
+      {/* <img src={logo} className="md:block h-[40px] border border-white-500 "></img> */}
       <RxHamburgerMenu
         className="text-white w-10 items-center mt-5 md:hidden"
         onClick={() => setOpen((prev) => !prev)}

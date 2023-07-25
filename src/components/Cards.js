@@ -212,7 +212,7 @@ export function Filtered() {
       <div className="flex  md:flex-row flex-col bg-[#E5E4E2] md:gap-10 gap-5  md:h-[500px] font-inter  text-start ">
         {DataThree.map((card) => {
           return (
-            <div key={card.id} className="bg-white rounded-md shadow-lg">
+            <div key={card.id} className="bg-white rounded-md shadow-lg hover:scale-110 duration-500">
               <img src={card.img} alt={card.title} className="rounded-t-md" />
               <div className="flex flex-col gap-3 p-5">
                 <h3 className="uppercase text-lg ">{card.title}</h3>
