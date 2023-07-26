@@ -8,8 +8,10 @@ export default function Navbar() {
 
   return (
  //fixed top-0 left-0 right-0 p-3 for fixed positioning
-    <div className=" flex  bg-black ">
-   
+    <div className=" flex  bg-black   ">
+   <div>
+    
+   </div>
       <img src={logo} className=" h-[60px] my-4"></img>
       {/* <img src={logo} className="md:block h-[40px] border border-white-500 "></img> */}
       <RxHamburgerMenu
@@ -17,12 +19,12 @@ export default function Navbar() {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <ul className="font-bold bg-[#E5E4E2] hover:bg-white absolute top-[10%] right-0 bottom-[270px] w-[60%] p-[10%] text-white flex flex-col gap-[30px]">
+        <ul className="font-bold bg-[#828180] hover:bg-white absolute top-[10%] right-0 bottom-[270px] w-[60%] p-[10%] text-white flex flex-col gap-[30px] z-50">
           
           <Link to="/">
             <li className="">Home</li>
           </Link>
-          <Link to="/#about">
+          <Link to= "#about " smooth>
             <li>About Us</li>
           </Link>
           <Link to="/contact">

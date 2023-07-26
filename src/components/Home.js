@@ -11,6 +11,7 @@ import { CarouselCards } from './Carousel';
 import cleaningitem from '../assets/crystal-de-passille-chabot-9gzU1mtTzWM-unsplash (1).png';
 import Carousel from './Carousel';
 import Footer from './Footer';
+import FAQ from './FAQ';
 
 
 const Home = () => {
@@ -48,7 +49,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <section className="h-auto opacity-100 ">
+      <section className="h-auto opacity-100 " id='about' >
         <div className="relative w-[100%] ">
           <img src={gloves} className="overflow-hidden h-[300px] w-[100%] brightness-75 "  />
           <div className="flex flex-col gap-2 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
@@ -133,6 +134,31 @@ const Home = () => {
         </div>
         <CarouselCards />
       </section>
+     
+      <section className="h-auto  bg-[#E5E4E2] text-center  p-10">
+        <div className=" p-10">
+          <h2 className="font-bold font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px]  ">
+            FAQs
+          </h2>
+          <p className=" text-sm md:text-base  ">
+            Here are some frequently asked questions (FAQs) for your cleaning service website:
+          </p>
+        </div>
+        <FAQ/>
+        <div className=" p-10 flex flex-col gap-2">
+          <h2 className="font-bold font-inter text-[18px] md:text-[20px] mx-auto  md:my-[0px]  ">
+            Still have a question?
+          </h2>
+          <p className=" text-sm md:text-base  ">
+            If you have any lingering questions or concerns, do not hesitate to reach out to us.
+          </p>
+          <Link to="/services ">
+            <button className=" hover:bg-white  md:text-base text-sm md:mt-[30px] h-6 w-20 md:ml-[550px] text-[14px]  md:block md:w-36 md:h-12  border-black  text-black border-2 md:border-black-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-black md:hover:border-slate-400  ">
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      </section>
       <section className="h-auto ">
         <div className="relative w-[100%] gap-5 ">
           <img src={cleaningitem} className="overflow-hidden h-[400px] w-[100%] brightness-75" />
@@ -155,12 +181,9 @@ const Home = () => {
         </div>
       </section>
       <Footer/>
-
-
     </div>
   );
 };
-
 export default Home;
 
-// border-4 border-indigo-500/100
+
