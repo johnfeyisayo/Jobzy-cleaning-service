@@ -1,7 +1,10 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function Booking() {
   return (
-    <div>Booking</div>
+    <div>
+    <Navbar />
+    </div>
   )
 }

@@ -53,17 +53,16 @@ const FAQ = () => {
     setAccordionItems(updatedAccordionItems);
   };
   return (
-    <div className='text-center  flex flex-col font-inter   justify-center md:w-[760px] p-2 md:ml-[300px]'>
+    <div className="text-center  flex flex-col font-inter   justify-center md:w-[760px] p-2 md:ml-[300px]">
       {accordionItems.map((item) => (
         <div className=" p-2" key={item.id}>
           <div
             className=" border-b-2 border-black   text-left"
             onClick={() => handleAccordionClick(item.id)}>
             <div className="  flex flex-row justify-between border-y-2 ">
-             
-                <h3 className=" h-10 pb-2   text-xs md:text-base">{item.question}</h3>
-             
-              {item.isActive ?  <ArrowDropUpIcon /> :<ArrowDropDownIcon /> }
+              <h3 className=" h-10 pb-2   text-xs md:text-base">{item.question}</h3>
+
+              {item.isActive ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             </div>
             {item.isActive && (
               <div className="">

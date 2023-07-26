@@ -13,7 +13,6 @@ import Carousel from './Carousel';
 import Footer from './Footer';
 import FAQ from './FAQ';
 
-
 const Home = () => {
   return (
     <div>
@@ -49,9 +48,9 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <section className="h-auto opacity-100 " id='about' >
+      <section className="h-auto opacity-100 " id="about">
         <div className="relative w-[100%] ">
-          <img src={gloves} className="overflow-hidden h-[300px] w-[100%] brightness-75 "  />
+          <img src={gloves} className="overflow-hidden h-[300px] w-[100%] brightness-75 " />
           <div className="flex flex-col gap-2 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
             <h2 className=" font-inter text-[25px] md:text-[40px] mx-auto   px-3">Who We Are</h2>
             <h3 className=" font-inter text-[18px] md:text-[25px] mx-auto  md:my-[0px] p-3">
@@ -134,7 +133,7 @@ const Home = () => {
         </div>
         <CarouselCards />
       </section>
-     
+
       <section className="h-auto  bg-[#E5E4E2] text-center  p-10">
         <div className=" p-10">
           <h2 className="font-bold font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px]  ">
@@ -144,7 +143,7 @@ const Home = () => {
             Here are some frequently asked questions (FAQs) for your cleaning service website:
           </p>
         </div>
-        <FAQ/>
+        <FAQ />
         <div className=" p-10 flex flex-col gap-2">
           <h2 className="font-bold font-inter text-[18px] md:text-[20px] mx-auto  md:my-[0px]  ">
             Still have a question?
@@ -180,10 +179,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 export default Home;
-
-
