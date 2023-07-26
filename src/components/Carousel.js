@@ -34,7 +34,6 @@ export default function CarouselComponent() {
           '--swiper-pagination-color': '#fff',
           '--swiper-navigation-color': '#fff',
           '--swiper-navigation-size': '25px'
-          
         }}>
         <SwiperSlide>
           <div className="relative">
@@ -146,80 +145,85 @@ export const textData = [
 export function CarouselCards() {
   return (
     <>
-    <div className='h-[800px]'>
-      
-            <Swiper
-            slidesPerView={2}
-              effect={'flip'}
-        grabCursor={true}
-        pagination={true}
-        navigation={true}
-        modules={[EffectFlip, Pagination, Navigation]}
-        className="mySwiper"
-        style={{
-          '--swiper-pagination-color': '#fff',
-          '--swiper-navigation-color': '#fff',
-          '--swiper-navigation-size': '25px'
-        }}
-       
-              >
-              <SwiperSlide>
-                <div className="flex flex-col h-[200px] bg-[#5F6564] rounded-md  p-6  px-10 md:p-10 text-start gap-2 text-white">
-                  <p className='md:text-base text-xs'>Jobzy Services Solution has been a lifesaver for me and my family! Their team, led by Mr. Adeolu, consistently delivers exceptional service. They pay attention to every detail and leave our home looking immaculate. I highly recommend their services.</p>
-                  <div className='flex flex-row'>
-                    <div className='text-xs'>
-                      <img src={clientPicture} className='w-[40px]'></img>
-                      
-                      <p className='md:hidden'> Ibrahim S.</p>
-                      <p className='md:block hidden'> Ibrahim S.</p>
-                  
-                    <div className=' hidden  md:gap-[950px] md:flex md:h-[20px] md:justify-between '>
-                
-                
+      <div className="h-[800px]">
+        <Swiper
+          slidesPerView={2}
+          effect={'flip'}
+          grabCursor={true}
+          pagination={true}
+          navigation={true}
+          modules={[EffectFlip, Pagination, Navigation]}
+          className="mySwiper"
+          style={{
+            '--swiper-pagination-color': '#fff',
+            '--swiper-navigation-color': '#fff',
+            '--swiper-navigation-size': '25px'
+          }}>
+          <SwiperSlide>
+            <div className="flex flex-col h-[200px] bg-[#5F6564] rounded-md  p-6  px-10 md:p-10 text-start gap-2 text-white">
+              <p className="md:text-base text-xs">
+                Jobzy Services Solution has been a lifesaver for me and my family! Their team, led
+                by Mr. Adeolu, consistently delivers exceptional service. They pay attention to
+                every detail and leave our home looking immaculate. I highly recommend their
+                services.
+              </p>
+              <div className="flex flex-row">
+                <div className="text-xs">
+                  <img src={clientPicture} className="w-[40px]"></img>
+
+                  <p className="md:hidden"> Ibrahim S.</p>
+                  <p className="md:block hidden"> Ibrahim S.</p>
+
+                  <div className=" hidden  md:gap-[950px] md:flex md:h-[20px] md:justify-between ">
                     <p> HR, Services</p>
-                   
-                    <p className=' flex  '>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
+
+                    <p className=" flex  ">
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
                     </p>
-                    </div>
-                    </div> 
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="flex flex-col h-[200px] bg-[#5F6564] rounded-md  p-6  px-10 md:p-10 text-start gap-2 text-white">
-                  <p className='md:text-base text-xs'> I recently moved into a new apartment and needed a deep cleaning. Jobzy Services Solution, under the guidance of Mr. Ibrahim, came to my rescue. I am thoroughly impressed with their professionalism and would recommend them to anyone in need of top-notch cleaning services.</p>
-                  <div className='flex flex-row'>
-                    <div className='text-xs'>
-                      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC2S_qCF4y8hAuM9Q6hU744HVomfvzdjhhWyq_oAWb2A&s' className='w-[40px] rounded-full'></img>
-                      
-                      <p className='md:hidden'> Sarah.J</p>
-                      <p className='md:block hidden'> Sarah.J</p>
-                  
-                    <div className=' hidden  md:gap-[950px] md:flex md:h-[20px] md:justify-between '>
-                
-                
-                    <p> Data Networks Inc</p>
-                   
-                    <p className=' flex  '>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    <img src={star}></img>
-                    </p>
-                    </div>
-                    </div> 
-                  </div>
-                </div>
-              </SwiperSlide>
-             
-            </Swiper>
+              </div>
             </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[200px] bg-[#5F6564] rounded-md  p-6  px-10 md:p-10 text-start gap-2 text-white">
+              <p className="md:text-base text-xs">
+                {' '}
+                I recently moved into a new apartment and needed a deep cleaning. Jobzy Services
+                Solution, under the guidance of Mr. Ibrahim, came to my rescue. I am thoroughly
+                impressed with their professionalism and would recommend them to anyone in need of
+                top-notch cleaning services.
+              </p>
+              <div className="flex flex-row">
+                <div className="text-xs">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC2S_qCF4y8hAuM9Q6hU744HVomfvzdjhhWyq_oAWb2A&s"
+                    className="w-[40px] rounded-full"></img>
+
+                  <p className="md:hidden"> Sarah.J</p>
+                  <p className="md:block hidden"> Sarah.J</p>
+
+                  <div className=" hidden  md:gap-[950px] md:flex md:h-[20px] md:justify-between ">
+                    <p> Data Networks Inc</p>
+
+                    <p className=" flex  ">
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
+                      <img src={star}></img>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </>
   );
 }
