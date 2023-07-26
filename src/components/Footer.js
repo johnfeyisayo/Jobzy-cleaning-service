@@ -3,56 +3,11 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Footer() {
   return (
     <div>
-      <section className="h-auto  bg-[#E5E4E2] text-center  p-10">
-        <div className=" p-10">
-          <h2 className="font-bold font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px]  ">
-            FAQs
-          </h2>
-          <p className=" text-sm md:text-base  ">
-            Here are some frequently asked questions (FAQs) for your cleaning service website:
-          </p>
-        </div>
-        <div className="  border border-cyan-950  text-left">
-          <div className="flex flex-row  border-y-2 border-black-500">
-            <p>What cleaning services do you offer?</p>
-            <ArrowDropDownIcon />
-          </div>
-          <div className="flex flex-row h[40px]md:w-[150px]">
-            <p>Are your cleaners experienced and trustworthy?</p>
-            <ArrowDropDownIcon />
-          </div>
-          <div className="flex flex-row h[40px]md:w-[150px]">
-            <p>Do I need to provide cleaning supplies?</p>
-            <ArrowDropDownIcon />
-          </div>
-          <div className="flex flex-row h[40px]md:w-[150px]">
-            <p>How do I schedule a cleaning service?</p>
-            <ArrowDropDownIcon />
-          </div>
-          <div className="flex flex-row h[40px]md:w-[150px]">
-            <p>AIs your cleaning service insured?</p>
-            <ArrowDropDownIcon />
-          </div>
-        </div>
-        <div className=" p-10 flex flex-col gap-2">
-          <h2 className="font-bold font-inter text-[18px] md:text-[20px] mx-auto  md:my-[0px]  ">
-            Still have a question?
-          </h2>
-          <p className=" text-sm md:text-base  ">
-            If you have any lingering questions or concerns, do not hesitate to reach out to us.
-          </p>
-          <Link to="/services ">
-            <button className=" hover:bg-white  md:text-base text-sm md:mt-[30px] h-6 w-20 md:ml-[550px] text-[14px]  md:block md:w-36 md:h-12  border-black  text-black border-2 md:border-black-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-black md:hover:border-slate-400  ">
-              Contact Us
-            </button>
-          </Link>
-        </div>
-      </section>
+      
       <div className="  bg-[black]  h-auto p-10 text-white text-center md:text-left text-xs md:text-base">
         <section className="  md:flex md:flex-row relative container mx-auto md:gap-[350px]  ">
           <div className="p-4 md:flex md:flex-col  md:text-sm">
