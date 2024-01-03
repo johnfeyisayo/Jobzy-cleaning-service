@@ -24,49 +24,46 @@ export default function Contact() {
         </div>
       </section>
       <section className="h-auto md:py-[100px]   md:bg-[#E5E4E2]  ">
-      
-          <div className="text-left flex flex-col gap-7 md:gap-[40px] h-auto md:w-[800px] justify-center   md:ml-[300px] md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
-            <p className="font-bold   font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] text-center ">
-              Let&#39;s Talk
-            </p>
-            <div>
-              <p className="text-xs pb-[4px]">FIRST NAME</p>
-              <input
-                className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
-                placeholder="First Name"
-              />
-            </div>
-            <div>
-              <p className="text-xs pb-[4px]">LAST NAME</p>
-              <input
-                className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
-                placeholder="Last Name"
-              />
-            </div>
-            <div>
-              <p className="text-xs pb-[4px]">EMAIL</p>
-              <input
-                className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
-                placeholder="Email"
-              />
-            </div>
-            <div>
-              <p className="text-xs pb-[4px]">MESSAGE</p>
-              <textarea
-                className="h-[200px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base   "
-                placeholder="Type your message..."
-
-              />
-            </div>
-            <div>
-              <button
-                className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none placeholder:text-brightness-50 text-white bg-black hover:text-black hover:bg-[#E5E4E2]"
-                placeholder="Type your message...">
-                Send Message
-              </button>
-            </div>
+        <div className="text-left flex flex-col gap-7 md:gap-[40px] h-auto md:w-[800px] justify-center   md:ml-[300px] md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
+          <p className="font-bold   font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] text-center ">
+            Let&#39;s Talk
+          </p>
+          <div>
+            <p className="text-xs pb-[4px]">FIRST NAME</p>
+            <input
+              className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
+              placeholder="First Name"
+            />
           </div>
- 
+          <div>
+            <p className="text-xs pb-[4px]">LAST NAME</p>
+            <input
+              className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
+              placeholder="Last Name"
+            />
+          </div>
+          <div>
+            <p className="text-xs pb-[4px]">EMAIL</p>
+            <input
+              className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <p className="text-xs pb-[4px]">MESSAGE</p>
+            <textarea
+              className="h-[200px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base   "
+              placeholder="Type your message..."
+            />
+          </div>
+          <div>
+            <button
+              className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none placeholder:text-brightness-50 text-white bg-black hover:text-black hover:bg-[#E5E4E2]"
+              placeholder="Type your message...">
+              Send Message
+            </button>
+          </div>
+        </div>
       </section>
       <section className=" md:items-center text-center h-auto mt-[0px] md:p-[100px]  p-[20px] md:h-auto      ">
         <div className="md:flex   md:ml-20  md:gap-40 text-center  md:items-center0">

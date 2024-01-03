@@ -7,7 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 export default function Footer() {
   return (
     <div>
-      
       <div className="  bg-[black]  h-auto p-10 text-white text-center md:text-left text-xs md:text-base">
         <section className="  md:flex md:flex-row relative container mx-auto md:gap-[350px]  ">
           <div className="p-4 md:flex md:flex-col  md:text-sm">
