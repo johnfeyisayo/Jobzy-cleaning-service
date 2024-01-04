@@ -1,18 +1,43 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Services */
+#services-bg {
+    background: url(./assets//kelly-sikkema-xp-ND7NjWaA-unsplash\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(172, 168, 168);
+    background-blend-mode: multiply;
+    height: 110px;
+}
+
+@media (min-width: 375px) { 
+    #services-bg {
+        background-size: cover;
+        /* height: 200px; */
+    }
+}
+
+@media (min-width: 640px) { 
+    #services-bg {
+        background-size: cover;
+        height: 210px;
+    }
+
+}
+
+@media (min-width: 768px) { 
+    #services-bg {
+        background-size: cover;
+        height: 260px;
+    }
+}
+
+@media (min-width: 1024px) { 
+    #services-bg {
+        background-size: cover;
+        height: 400px;
+    }
+}
