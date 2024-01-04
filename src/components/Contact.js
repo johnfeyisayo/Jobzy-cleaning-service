@@ -5,8 +5,41 @@ import Footer from './Footer';
 import cleaningItem from '../assets/kelly-sikkema-xp-ND7NjWaA-unsplash (1).png';
 import icon1 from '../assets/phone.png';
 import icon2 from '../assets/contact.png';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { TextField } from '@mui/material';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required('First Name is required'),
+    lastName: Yup.string().required('Last Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    message: Yup.string().required('Message is required')
+  });
+  const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: ''
+    },
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
+      emailjs
+        //input the correct send codes for the emial js
+        .send('service_t6exg8s', 'template_lfjbgap', values, '3Ap5vY4h11rvt8C3m')
+        .then((response) => {
+          console.log('Email sent successfully!', response.status, response.text);
+          resetForm();
+        })
+        .catch((error) => {
+          console.error('Email sending failed:', error);
+        });
+      console.log('Form submitted:', values);
+    }
+  });
+  // console.log(formik);
   return (
     <div>
       <Navbar />
@@ -30,36 +63,60 @@ export default function Contact() {
           </p>
           <div>
             <p className="text-xs pb-[4px]">FIRST NAME</p>
-            <input
+            <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="First Name"
+              name="firstName"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.firstName}
+              error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+              helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </div>
           <div>
             <p className="text-xs pb-[4px]">LAST NAME</p>
-            <input
+            <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Last Name"
+              name="lastName"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.lastName}
+              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+              helperText={formik.touched.lastName && formik.errors.lastName}
             />
           </div>
           <div>
             <p className="text-xs pb-[4px]">EMAIL</p>
-            <input
+            <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Email"
+              name="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
             />
           </div>
           <div>
             <p className="text-xs pb-[4px]">MESSAGE</p>
-            <textarea
-              className="h-[200px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base   "
+            <TextField
+              className="h-[200px] w-full border border-[#6D6D6D] rounded  placeholder:text-base   "
               placeholder="Type your message..."
+              multiline={true}
+              rows={5}
+              name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              error={formik.touched.message && Boolean(formik.errors.message)}
+              helperText={formik.touched.message && formik.errors.message}
             />
           </div>
           <div>
-            <button
-              className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none placeholder:text-brightness-50 text-white bg-black hover:text-black hover:bg-[#E5E4E2]"
-              placeholder="Type your message...">
+            <button className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none placeholder:text-brightness-50 text-white bg-black hover:text-black hover:bg-[#E5E4E2]">
               Send Message
             </button>
           </div>
