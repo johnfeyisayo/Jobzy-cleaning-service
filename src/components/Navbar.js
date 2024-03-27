@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link to="/">
             <li className="">Home</li>
           </Link>
-          <Link to="#about " smooth>
+          <Link to="# " smooth>
             <li>About Us</li>
           </Link>
           <Link to="/contact">
