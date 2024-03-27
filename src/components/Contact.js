@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,12 +9,49 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField } from '@mui/material';
 import emailjs from '@emailjs/browser';
-import PropTypes from 'prop-types';
 
 
-export default function Contact({ firstname, getFirstName, lastname, getLastName, email, getEmail, message, getMessage, handleSubmit, sent }) {
+export default function Contact() {
   
+  const [firstname, setFirstName] = useState('');
+  const [lastname, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [location, setLocation] = useState('');
+  const [message, setMessage] = useState('');
+  const [sent, setEmailSent] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_stsnrqw';
+    const templateId = 'template_f735ylr';
+    const publicKey = 'BRJxKiVOY5wD6fLO9';
+
+    const temlateParams = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        phone: phone,
+        location: location,
+        to_name: 'Jobzy Services', 
+        message: message
+    }
+
+    emailjs.send(serviceId, templateId, temlateParams, publicKey)
+    .then((response) => {
+        setEmailSent('Email sent successfully!', response);
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setLocation('');
+        setMessage('');
+    })
+    .catch((error) => {
+        console.error('Error sending email:', error);
+    });
+};
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required('First Name is required'),
@@ -73,12 +110,13 @@ export default function Contact({ firstname, getFirstName, lastname, getLastName
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="First Name"
               value={firstname}
-              onChange={getFirstName}
+              onChange={(e) => setFirstName(e.target.value)}
               // onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               // value={formik.values.firstName}
               error={formik.touched.firstName && Boolean(formik.errors.firstName)}
               helperText={formik.touched.firstName && formik.errors.firstName}
+              required
             />
           </div>
           <div>
@@ -87,12 +125,13 @@ export default function Contact({ firstname, getFirstName, lastname, getLastName
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Last Name"
               value={lastname}
-              onChange={getLastName}
+              onChange={(e) => setLastName(e.target.value)}
               // onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               // value={formik.values.lastName}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
+              required
             />
           </div>
           <div>
@@ -100,13 +139,15 @@ export default function Contact({ firstname, getFirstName, lastname, getLastName
             <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Email"
+              type='email'
               value={email}
-              onChange={getEmail}
+              onChange={(e) => setEmail(e.target.value)}
               // onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               // value={formik.values.email}
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
+              required
             />
           </div>
           <div>
@@ -117,12 +158,13 @@ export default function Contact({ firstname, getFirstName, lastname, getLastName
               multiline={true}
               rows={5}
               value={message}
-              onChange={getMessage}
+              onChange={(e) => setMessage(e.target.value)}
               // onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               // value={formik.values.message}
               error={formik.touched.message && Boolean(formik.errors.message)}
               helperText={formik.touched.message && formik.errors.message}
+              required
             />
           </div>
           <div>
@@ -161,16 +203,4 @@ export default function Contact({ firstname, getFirstName, lastname, getLastName
   );
 }
 
-Contact.propTypes = {
-  firstname: PropTypes.string,
-  getFirstName: PropTypes.string,
-  lastname: PropTypes.string,
-  getLastName: PropTypes.string,
-  email: PropTypes.string,
-  getEmail: PropTypes.string,
-  handleSubmit: PropTypes.string,
-  sent: PropTypes.string,
-  message: PropTypes.string,
-  getMessage: PropTypes.string,
-};
 //border-4 border-indigo-500/100

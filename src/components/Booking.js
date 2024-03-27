@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import {
@@ -19,7 +19,6 @@ import { TimePicker } from '@mui/x-date-pickers';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
-import PropTypes from 'prop-types';
 // import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 // import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 // import { DateRangePicker } from '@mui/x-date-pickers-pro/DateRangePicker';
@@ -28,7 +27,49 @@ import PropTypes from 'prop-types';
 // const tomorrow = dayjs().add(1, 'day');
 // const todayEndOfTheDay = today.endOf('day');
 
-export default function Booking({ firstname, getFirstName, lastname, getLastName, email, getEmail, phone, getPhoneNumber, location, getLocation, message, getMessage, handleSubmit, sent }) {
+export default function Booking() {
+
+  const [firstname, setFirstName] = useState('');
+  const [lastname, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [location, setLocation] = useState('');
+  const [message, setMessage] = useState('');
+  const [sent, setEmailSent] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_stsnrqw';
+    const templateId = 'template_2hs7z0o';
+    const publicKey = 'BRJxKiVOY5wD6fLO9';
+
+    const temlateParams = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        phone: phone,
+        location: location,
+        to_name: 'Jobzy Services', 
+        message: message
+    }
+
+    emailjs.send(serviceId, templateId, temlateParams, publicKey)
+    .then((response) => {
+        setEmailSent('Email sent successfully!', response);
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setLocation('');
+        setMessage('');
+    })
+    .catch((error) => {
+      setErrorMessage('Error sending email:', error);
+    });
+};
+
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required('First Name is required'),
@@ -104,12 +145,13 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
                   className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none  md:w-full"
                   placeholder="First Name"
                   value={firstname}
-                  onChange={getFirstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   // onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   // value={formik.values.firstName}
                   error={formik.touched.firstName && Boolean(formik.errors.firstName)}
                   helperText={formik.touched.firstName && formik.errors.firstName}
+                  required
                 />
               </div>
               <div className="my-7 md:mt-0 w-full">
@@ -118,12 +160,13 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
                   className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
                   placeholder="Last Name"
                   value={lastname}
-                  onChange={getLastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   // onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   // value={formik.values.lastName}
                   error={formik.touched.lastName && Boolean(formik.errors.lastName)}
                   helperText={formik.touched.lastName && formik.errors.lastName}
+                  required
                 />
               </div>
             </div>
@@ -135,12 +178,13 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
                   placeholder="Email Address"
                   type='email'
                   value={email}
-                  onChange={getEmail}
+                  onChange={(e) => setEmail(e.target.value)}
                   // onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   // value={formik.values.email}
                   error={formik.touched.email && Boolean(formik.errors.email)}
                   helperText={formik.touched.email && formik.errors.email}
+                  required
                 />
               </div>
               <div className="my-7 md:mt-0 w-full">
@@ -149,12 +193,13 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
                   className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
                   placeholder="Phone Number"
                   value={phone}
-                  onChange={getPhoneNumber}
+                  onChange={(e) => setPhone(e.target.value)}
                   // onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   // value={formik.values.phone}
                   error={formik.touched.phone && Boolean(formik.errors.phone)}
                   helperText={formik.touched.phone && formik.errors.phone}
+                  required
                 />
               </div>
             </div>
@@ -164,12 +209,13 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
                 className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
                 placeholder="Location"
                 value={location}
-                onChange={getLocation}
+                onChange={(e) => setLocation(e.target.value)}
                 // onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 // value={formik.values.location}
                 error={formik.touched.location && Boolean(formik.errors.location)}
                 helperText={formik.touched.location && formik.errors.location}
+                required
               />
             </div>
 
@@ -341,15 +387,18 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
               multiline={true}
               rows={5}
               value={message}
-              onChange={getMessage}
+              onChange={(e) => setMessage(e.target.value)}
               // onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               // value={formik.values.message}
               error={formik.touched.message && Boolean(formik.errors.message)}
               helperText={formik.touched.message && formik.errors.message}
+              required
             />
           </div>
           <h1 className='m-auto text-lg text-[#1A9447]  p-4 '>{sent}</h1>
+          <h1 className='m-auto text-lg text-[#F54F59]  p-4 '>{errorMessage}</h1>
+
           <div className="px-10 mb-10">
             <button
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none placeholder:text-brightness-50 text-white bg-black hover:text-black hover:bg-[#E5E4E2]"
@@ -364,23 +413,7 @@ export default function Booking({ firstname, getFirstName, lastname, getLastName
   );
 }
 
-Booking.propTypes = {
-  firstname: PropTypes.string,
-  getFirstName: PropTypes.func,
-  lastname: PropTypes.string,
-  getLastName: PropTypes.func,
-  email: PropTypes.string,
-  getEmail: PropTypes.func,
-  phone: PropTypes.string,
-  getPhoneNumber: PropTypes.func,
-  location: PropTypes.string,
-  getLocation: PropTypes.func,
-  handleSubmit: PropTypes.func,
-  // setEmailSent: PropTypes.string,
-  sent: PropTypes.string,
-  message: PropTypes.string,
-  getMessage: PropTypes.func,
-};
+
 
 {
   /* <div className="flex  w-full ">
