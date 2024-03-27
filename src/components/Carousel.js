@@ -50,7 +50,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[450px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+                <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[450px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white md:hover:border-slate-400  ">
                   Make a Booking
                 </button>
               </Link>

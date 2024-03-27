@@ -7,15 +7,20 @@ import Contact from './components/Contact';
 import Services from './components/Services';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import Test from './components/Test';
+
 function App() {
+
   return (
     <div className="App">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="booking" element={<Booking />}></Route>
+          <Route path="booking" element={<Booking />}>
+          </Route>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="services" element={<Services />}></Route>
+          <Route path="test" element={<Test />}></Route>
         </Routes>
       </LocalizationProvider>
     </div>

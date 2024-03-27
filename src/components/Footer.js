@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="mt-[30px] text-base md:text-base">Contact:</p>
 
             <p className="mt-[10px]">08134667015</p>
-            <p className="mt-[10px]">09129466346</p>
+            <p className="mt-[10px]">08133475062</p>
             <p className="mt-[10px]">Jobzyservicessolution@gmail.com</p>
           </div>
 
