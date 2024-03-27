@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import { RxHamburgerMenu } from 'react-icons/rx';
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
