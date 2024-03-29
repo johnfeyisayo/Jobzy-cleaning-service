@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to="/">
             <li className="">Home</li>
           </Link>
-          <Link to="# " smooth>
+          <Link to="#about " smooth>
             <li>About Us</li>
           </Link>
           <Link to="/contact">
@@ -64,3 +64,4 @@ export default function Navbar() {
     </div>
   );
 }
+

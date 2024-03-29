@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -10,49 +10,7 @@ import * as Yup from 'yup';
 import { TextField } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
-
 export default function Contact() {
-  
-  const [firstname, setFirstName] = useState('');
-  const [lastname, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [location, setLocation] = useState('');
-  const [message, setMessage] = useState('');
-  const [sent, setEmailSent] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const serviceId = 'service_stsnrqw';
-    const templateId = 'template_f735ylr';
-    const publicKey = 'BRJxKiVOY5wD6fLO9';
-
-    const temlateParams = {
-        firstname: firstname,
-        lastname: lastname,
-        email: email,
-        phone: phone,
-        location: location,
-        to_name: 'Jobzy Services', 
-        message: message
-    }
-
-    emailjs.send(serviceId, templateId, temlateParams, publicKey)
-    .then((response) => {
-        setEmailSent('Email sent successfully!', response);
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPhone('');
-        setLocation('');
-        setMessage('');
-    })
-    .catch((error) => {
-        console.error('Error sending email:', error);
-    });
-};
-
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required('First Name is required'),
     lastName: Yup.string().required('Last Name is required'),
@@ -72,7 +30,7 @@ export default function Contact() {
         //input the correct send codes for the emial js
         .send('service_t6exg8s', 'template_lfjbgap', values, '3Ap5vY4h11rvt8C3m')
         .then((response) => {
-          console.log('Message sent successfully!', response.status, response.text);
+          console.log('Email sent successfully!', response.status, response.text);
           resetForm();
         })
         .catch((error) => {
@@ -99,8 +57,7 @@ export default function Contact() {
         </div>
       </section>
       <section className="h-auto md:py-[100px]   md:bg-[#E5E4E2]  ">
-        <form onSubmit={handleSubmit} className="text-left flex flex-col gap-7 md:gap-[40px] h-auto md:w-[800px] justify-center   md:ml-[300px] md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
-        <h1 className='m-auto text-lg text-[#1A9447]  p-4 '>{sent}</h1>
+        <div className="text-left flex flex-col gap-7 md:gap-[40px] h-auto md:w-[800px] justify-center   md:ml-[300px] md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
           <p className="font-bold   font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] text-center ">
             Let&#39;s Talk
           </p>
@@ -109,14 +66,12 @@ export default function Contact() {
             <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="First Name"
-              value={firstname}
-              onChange={(e) => setFirstName(e.target.value)}
-              // onChange={formik.handleChange}
+              name="firstName"
+              onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.firstName}
+              value={formik.values.firstName}
               error={formik.touched.firstName && Boolean(formik.errors.firstName)}
               helperText={formik.touched.firstName && formik.errors.firstName}
-              required
             />
           </div>
           <div>
@@ -124,14 +79,12 @@ export default function Contact() {
             <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Last Name"
-              value={lastname}
-              onChange={(e) => setLastName(e.target.value)}
-              // onChange={formik.handleChange}
+              name="lastName"
+              onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.lastName}
+              value={formik.values.lastName}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
-              required
             />
           </div>
           <div>
@@ -139,15 +92,12 @@ export default function Contact() {
             <TextField
               className="h-[48px] w-full border border-[#6D6D6D] rounded p-[12px] placeholder:text-base outline-none"
               placeholder="Email"
-              type='email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              // onChange={formik.handleChange}
+              name="email"
+              onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.email}
+              value={formik.values.email}
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
-              required
             />
           </div>
           <div>
@@ -157,14 +107,12 @@ export default function Contact() {
               placeholder="Type your message..."
               multiline={true}
               rows={5}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              // onChange={formik.handleChange}
+              name="message"
+              onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.message}
+              value={formik.values.message}
               error={formik.touched.message && Boolean(formik.errors.message)}
               helperText={formik.touched.message && formik.errors.message}
-              required
             />
           </div>
           <div>
@@ -172,7 +120,7 @@ export default function Contact() {
               Send Message
             </button>
           </div>
-        </form>
+        </div>
       </section>
       <section className=" md:items-center text-center h-auto mt-[0px] md:p-[100px]  p-[20px] md:h-auto      ">
         <div className="md:flex   md:ml-20  md:gap-40 text-center  md:items-center0">
@@ -180,7 +128,7 @@ export default function Contact() {
             <img src={icon1} className=" ml-[90px]  p-3"></img>
             <p className=" font-inter text-[18px] font-semibold p-2">Call</p>
             <p className="md:h-[48px] md:w-[300px] font-inter text-[12px] font-small p-1">
-              08134667015, 08133475062
+              08134667015, 09129466346
             </p>
             <p className="md:h-[48px] md:w-[300px] font-inter text-[12px] font-small p-1 text-[#6D6D6D]">
               Our team is always available for a call between 8:00am - 5:00pm, 7 days a week
@@ -202,5 +150,4 @@ export default function Contact() {
     </div>
   );
 }
-
 //border-4 border-indigo-500/100
