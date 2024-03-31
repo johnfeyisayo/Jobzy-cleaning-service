@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div>
       <div className="  bg-[black]  h-auto p-10 text-white text-center md:text-left text-xs md:text-base">
-        <section className="  md:flex md:flex-row relative container mx-auto md:gap-[350px]  ">
+        <section className="  md:flex md:flex-row relative container mx-auto  justify-evenly  ">
           <div className="p-4 md:flex md:flex-col  md:text-sm">
             <img src={logo} className="hidden md:block h-[50px] w-[50px] "></img>
             <p className="text-base md:mt-[40px] md:text-base">Address:</p>
