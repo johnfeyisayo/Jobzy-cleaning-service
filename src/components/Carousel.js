@@ -50,7 +50,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[450px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white">
+                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white">
                   Make a Booking
                 </button>
               </Link>
@@ -72,7 +72,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[450px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
+                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
                   {' '}
                   Make a Booking{' '}
                 </button>
@@ -95,7 +95,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white hover:text-black w-40 h-10 rounded-sm  md:text-base text-xs md:mt-[20px] md:ml-[450px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
+                <button className=" hover:bg-white hover:text-black w-40 h-10 rounded-sm  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
                   Make a Booking
                 </button>
               </Link>
