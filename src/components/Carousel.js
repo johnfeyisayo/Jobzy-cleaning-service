@@ -39,7 +39,7 @@ export default function CarouselComponent() {
           <div className="relative">
             <img src={img1} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
-              <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
+              <h1 className="md:font-bold  text-[20px] md:text-[40px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
                 <br />
                 Your Trusted Cleaning Partner
@@ -50,7 +50,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[450px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white">
                   Make a Booking
                 </button>
               </Link>
@@ -61,7 +61,7 @@ export default function CarouselComponent() {
           <div className="relative">
             <img src={img2} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
-              <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
+              <h1 className="md:font-bold  text-[20px] md:text-[40px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
                 <br />
                 Your Trusted Cleaning Partner
@@ -72,7 +72,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[450px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+                <button className=" hover:bg-white w-40 h-10 rounded-sm hover:text-black  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
                   {' '}
                   Make a Booking{' '}
                 </button>
@@ -84,7 +84,7 @@ export default function CarouselComponent() {
           <div className="relative">
             <img src={img3} className="md:h-[750px] md:w-[100%] h-[500px] brightness-75 "></img>
             <div className="0 flex flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
-              <h1 className="md:font-bold  text-[20px] md:text-[60px] whitespace-nowrap">
+              <h1 className="md:font-bold  text-[20px] md:text-[40px] whitespace-nowrap">
                 Welcome to Jobzy Services Solution
                 <br />
                 Your Trusted Cleaning Partner
@@ -95,7 +95,7 @@ export default function CarouselComponent() {
               </p>
 
               <Link to="/booking ">
-                <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[450px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+                <button className=" hover:bg-white hover:text-black w-40 h-10 rounded-sm  md:text-base text-xs md:mt-[20px] md:ml-[250px] text-[14px] md:block md:w-40 md:h-12  bg-black md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white">
                   Make a Booking
                 </button>
               </Link>

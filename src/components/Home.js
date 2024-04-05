@@ -19,12 +19,12 @@ const Home = () => {
       <Navbar />
       <Carousel className="" />
       {/* h-[600px] w-full bg-red-50 */}
-      <div className=" md:items-center text-center h-auto md:mt-[100px] mt-[0px]  p-[20px] md:h-auto md:bg-[#E5E4E2] md:py-[70px] ">
+      <div className=" md:items-center text-center h-auto md:mt-[100px] mt-[0px]  p-[20px] md:h-auto md:bg-[#E5E4E2] md:py-[70px]">
         <h2 className="font-bold font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] p-3 ">
           How it Works
         </h2>
 
-        <section className="md:flex  text-center md:w-[1240px] md:h-[222px] md:items-center  md:pt-[40px] md:ml-[40px] md:mt-[40px]">
+        <section className="md:flex text-center md:w-[1240px] md:h-[222px] md:items-center  md:pt-[40px] md:ml-[40px] md:mt-[40px]">
           <div className=" items-center  justify-center  p-5  md:mx-[50px] ">
             <img src={icon1} className=" ml-[80px] p-3"></img>
             <p className=" font-inter text-[18px] font-semibold p-2">Place a booking</p>
@@ -115,7 +115,7 @@ const Home = () => {
               </div>
             </div>
             <Link to="/booking ">
-              <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[350px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+              <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[350px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white md:hover:border-slate-400  ">
                 Make a Booking
               </button>
             </Link>
@@ -172,7 +172,7 @@ const Home = () => {
             </h3>
 
             <Link to="/booking ">
-              <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[300px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-black md:hover:text-white space-x-6 md:text-white md:hover:border-slate-400  ">
+              <button className=" hover:bg-white hover:text-black  md:text-base text-xs md:mt-[20px] h-6 md:ml-[300px] text-[14px] border md:block md:w-40 md:h-12  bg-black  md:border-slate-300 md:rounded  md:hover:bg-white md:hover:text-black space-x-6 md:text-white md:hover:border-slate-400  ">
                 Make a Booking
               </button>
             </Link>
