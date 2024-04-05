@@ -19,12 +19,12 @@ const Home = () => {
       <Navbar />
       <Carousel className="" />
       {/* h-[600px] w-full bg-red-50 */}
-      <div className=" md:items-center text-center h-auto md:mt-[100px] mt-[0px]  p-[20px] md:h-auto md:bg-[#E5E4E2] md:py-[70px] ">
+      <div className=" md:items-center text-center h-auto md:mt-[100px] mt-[0px]  p-[20px] md:h-auto md:bg-[#E5E4E2] md:py-[70px]">
         <h2 className="font-bold font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] p-3 ">
           How it Works
         </h2>
 
-        <section className="md:flex  text-center md:w-[1240px] md:h-[222px] md:items-center  md:pt-[40px] md:ml-[40px] md:mt-[40px]">
+        <section className="md:flex text-center md:w-[1240px] md:h-[222px] md:items-center  md:pt-[40px] md:ml-[40px] md:mt-[40px]">
           <div className=" items-center  justify-center  p-5  md:mx-[50px] ">
             <img src={icon1} className=" ml-[80px] p-3"></img>
             <p className=" font-inter text-[18px] font-semibold p-2">Place a booking</p>

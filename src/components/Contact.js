@@ -70,7 +70,7 @@ export default function Contact() {
       <section className="h-auto md:py-[100px]   md:bg-[#E5E4E2]  ">
         <form
           onSubmit={handleSubmit}
-          className="text-left flex flex-col gap-7 md:gap-[40px]  md:w-[800px] justify-center  lg:ml-72  md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
+          className="text-left border  flex flex-col gap-7 md:gap-[40px]  md:w-[800px] justify-center  lg:ml-72  md:p-[60px] md:mt-0 p-[10px] bg-white rounded">
           <p className="font-bold   font-inter text-[25px] md:text-[40px] mx-auto  md:my-[0px] text-center ">
             Let&#39;s Talk
           </p>
