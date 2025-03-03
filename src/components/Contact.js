@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <div>
       <Navbar />
-      <section className="h-auto font-inter ">
+      <section className="h-auto font-inter">
         <div className="relative w-[100%] gap-5 ">
           <img src={cleaningItem} className="overflow-hidden md:h-[400px] w-full brightness-75 " />
           <div className="flex  flex-col gap-6 absolute font-inter text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
